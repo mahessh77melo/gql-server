@@ -1,0 +1,52 @@
+.add-book {
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	padding: 2rem;
+	width: 50%;
+	align-self: center;
+	/* margin-left: 5rem; */
+	display: inline-block;
+}
+.field {
+	display: flex;
+	display: space-around;
+	margin-top: 1.3rem;
+}
+.field input,
+select {
+	padding: 0.5rem 1rem;
+	font-size: 1.5rem;
+	font-family: inherit;
+	align-self: flex-end;
+	margin-left: 1rem;
+	color: #555;
+}
+.field label {
+	font-size: 1.5rem;
+	font-weight: 500;
+	color: #777;
+}
+.submit {
+	color: white;
+	background-color: rgb(223, 11, 11);
+	padding: 1rem 1.5rem;
+	border-radius: 50%;
+	align-self: flex-start;
+	display: inline-block;
+	margin-top: 2rem;
+	font-size: 2rem;
+	border: none;
+	box-shadow: 0 0.5rem 0.6rem rgba(0, 0, 0, 0.3);
+	cursor: pointer;
+	transition: all 0.3s;
+}
+.submit:hover {
+	transform: translateY(-0.5rem);
+}
+.submit:focus {
+	transform: translateY(0.3rem);
+}
+option {
+	font-size: 1.3rem;
+}

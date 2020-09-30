@@ -1,0 +1,30 @@
+.book-list {
+	font-size: 1.8rem;
+	margin: 2rem;
+	padding: 2rem;
+	list-style: none;
+	transition: all 0.2s;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.title {
+	font-size: 1.4rem;
+	font-weight: 300;
+	color: rgb(243, 8, 98);
+	transition: all 0.2s;
+	padding: 1rem;
+	border-radius: 6px;
+	box-shadow: 0 0.5rem 0.6rem rgba(0, 0, 0, 0.3);
+	text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.2);
+	margin-bottom: 1.2rem;
+	border: 2px solid rgb(243, 8, 98);
+	display: inline-block;
+	margin-bottom: 2rem;
+	cursor: pointer;
+}
+.title:hover {
+	box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.4);
+	transform: translateY(-0.5rem);
+}
