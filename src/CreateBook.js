@@ -13,3 +13,4 @@ const CreateBook = ({ book, setBook }) => {
 };
 
 export default CreateBook;
+/*  the setBook function up there passes in the current id of this book(whatever book is clicked), so the state of the app component is set to the id of the clicked book */

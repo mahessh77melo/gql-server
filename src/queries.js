@@ -1,5 +1,7 @@
 import { gql } from "apollo-boost";
 
+/* seperate file for queries. this makes the real code clean and non-hard coded. */
+
 const authorsQuery = gql`
 	{
 		authors {
@@ -17,6 +19,8 @@ const booksQuery = gql`
 		}
 	}
 `;
+// this is the format for mutation, can give the mutation a name if u want, the types of the arguments have to be specified and the necessary arguments for creating a mutation had to be given.
+
 const createBookQuery = gql`
 	mutation($name: String!, $genre: String!, $author: ID!) {
 		addBook(name: $name, genre: $genre, authorId: $author) {
@@ -44,4 +48,5 @@ const getBookQuery = gql`
 		}
 	}
 `;
+// Named imports
 export { authorsQuery, booksQuery, createBookQuery, getBookQuery };

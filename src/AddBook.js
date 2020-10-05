@@ -7,19 +7,23 @@ const AddBook = ({ data, refetch }) => {
 	const [name, setName] = useState("");
 	const [genre, setGenre] = useState("");
 	const [author, setAuthor] = useState("");
+	// useMutation notes at the bottom
 	const [addBook, { data: newBook }] = useMutation(createBookQuery);
+	/* adding a newbook returns some form of data. so whenever the value of the newbook changes, (when a new book is created) reset the input values. */
 	useEffect(() => {
 		setName("");
-		// setAuthor("");
+		setAuthor("#");
 		setGenre("");
 		refetch();
 	}, [newBook, refetch]);
+
 	const handleSubmit = (e) => {
-		e.preventDefault();
+		e.preventDefault(); // prevent the reload
 		addBook({ variables: { name, genre, author } });
 		console.log(newBook);
 	};
 	return (
+		// Good old react form control
 		<form className="add-book" onSubmit={handleSubmit}>
 			<div className="field">
 				<label htmlFor="name">Book Name : </label>
@@ -64,3 +68,6 @@ const AddBook = ({ data, refetch }) => {
 };
 
 export default AddBook;
+
+/* useMutation-->
+			the useMutation hook can be destructed into a function and the returned data value which i have renamed as newBook in the named import. This function, when called along with the suitable arguments, triggers the mutation for the values given. In this case, addBook is the name of the function */
